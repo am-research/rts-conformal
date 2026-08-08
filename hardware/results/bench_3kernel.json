@@ -1,0 +1,493 @@
+[
+  {
+    "file": "tf/traces_final/bsort_cache_off.csv",
+    "meta": {
+      "task": "bsort_cache_off",
+      "n": "200000",
+      "unit": "cycles",
+      "clock_hz": "216000000",
+      "caches": "disabled",
+      "block_cycles": "3655361215"
+    },
+    "diagnostics": {
+      "ljungbox_min_p": 0.030387462030328886,
+      "ljungbox_n_sig": 3,
+      "adf_p": 0.0,
+      "acf_lag1": -0.003816122165386579,
+      "drift_rel": 4.741306929232667e-05,
+      "n": 200000,
+      "min": 125125.0,
+      "max": 157526.0,
+      "mean": 153008.4221,
+      "cv": 0.01808803621445134,
+      "max_over_median": 1.0246059983218747
+    },
+    "coverage": {
+      "CP": {
+        "cov_mean": 0.9502050526315791,
+        "cov_ci95": 0.0005375949682497687,
+        "shortfall_pp": 0.0,
+        "bound_median": 155997.0,
+        "inf_rate": 0.0
+      },
+      "Tolerance": {
+        "cov_mean": 0.9537206315789473,
+        "cov_ci95": 0.000577255185531501,
+        "shortfall_pp": 0.0,
+        "bound_median": 156019.0,
+        "inf_rate": 0.0
+      },
+      "EQ": {
+        "cov_mean": 0.9501294736842106,
+        "cov_ci95": 0.0005296704563187878,
+        "shortfall_pp": 0.0,
+        "bound_median": 155996.05,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-point": {
+        "cov_mean": 0.9575408421052631,
+        "cov_ci95": 0.0036199982531765805,
+        "shortfall_pp": 0.0,
+        "bound_median": 156022.95514574568,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-profile": {
+        "cov_mean": 0.9673614736842105,
+        "cov_ci95": 0.0070302415167863095,
+        "shortfall_pp": 0.0,
+        "bound_median": 156031.65208423778,
+        "inf_rate": 0.2
+      },
+      "EVT-gof-point": {
+        "cov_mean": 0.954056842105263,
+        "cov_ci95": 0.001783093971259617,
+        "shortfall_pp": 0.0,
+        "bound_median": 156014.87230727787,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-profile": {
+        "cov_mean": 0.961733052631579,
+        "cov_ci95": 0.0017283962659016816,
+        "shortfall_pp": 0.0,
+        "bound_median": 156080.09648415257,
+        "inf_rate": 0.0
+      }
+    },
+    "full_trace_gpd_fit": {
+      "u": 156259.0,
+      "xi": -0.14652479354237932,
+      "sigma": 227.83166726905932,
+      "k": 3997,
+      "n": 200000
+    }
+  },
+  {
+    "file": "tf/traces_final/bsort_cache_on.csv",
+    "meta": {
+      "task": "bsort_cache_on",
+      "n": "200000",
+      "unit": "cycles",
+      "clock_hz": "216000000",
+      "caches": "icache+dcache",
+      "block_cycles": "1655461722"
+    },
+    "diagnostics": {
+      "ljungbox_min_p": 0.3347791061511533,
+      "ljungbox_n_sig": 0,
+      "adf_p": 0.0,
+      "acf_lag1": 0.0017759413738471705,
+      "drift_rel": -0.00030942903341712726,
+      "n": 200000,
+      "min": 31293.0,
+      "max": 44645.0,
+      "mean": 39858.62248,
+      "cv": 0.03132268738836603,
+      "max_over_median": 1.1182496743813246
+    },
+    "coverage": {
+      "CP": {
+        "cov_mean": 0.9498341052631578,
+        "cov_ci95": 0.0008537067396594764,
+        "shortfall_pp": 0.016589473684214262,
+        "bound_median": 41787.0,
+        "inf_rate": 0.0
+      },
+      "Tolerance": {
+        "cov_mean": 0.9534772631578948,
+        "cov_ci95": 0.000812520032898,
+        "shortfall_pp": 0.0,
+        "bound_median": 41828.0,
+        "inf_rate": 0.0
+      },
+      "EQ": {
+        "cov_mean": 0.949745894736842,
+        "cov_ci95": 0.0008657237726384942,
+        "shortfall_pp": 0.025410526315794435,
+        "bound_median": 41786.05,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-point": {
+        "cov_mean": 0.9556151578947367,
+        "cov_ci95": 0.0011392383994474474,
+        "shortfall_pp": 0.0,
+        "bound_median": 41851.56664935564,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-profile": {
+        "cov_mean": 0.959326947368421,
+        "cov_ci95": 0.001072874689966702,
+        "shortfall_pp": 0.0,
+        "bound_median": 41894.08847517257,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-point": {
+        "cov_mean": 0.9519962105263157,
+        "cov_ci95": 0.0017550233945152738,
+        "shortfall_pp": 0.0,
+        "bound_median": 41801.830205411046,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-profile": {
+        "cov_mean": 0.9580280000000001,
+        "cov_ci95": 0.00203607889716796,
+        "shortfall_pp": 0.0,
+        "bound_median": 41876.95764200807,
+        "inf_rate": 0.0
+      }
+    },
+    "full_trace_gpd_fit": {
+      "u": 42222.0,
+      "xi": -0.09940663681594403,
+      "sigma": 400.0857508126297,
+      "k": 3999,
+      "n": 200000
+    }
+  },
+  {
+    "file": "tf/traces_final/insertsort_cache_off.csv",
+    "meta": {
+      "task": "insertsort_cache_off",
+      "n": "200000",
+      "unit": "cycles",
+      "clock_hz": "216000000",
+      "caches": "disabled",
+      "block_cycles": "990103938"
+    },
+    "diagnostics": {
+      "ljungbox_min_p": 1.0781108064874257e-11,
+      "ljungbox_n_sig": 20,
+      "adf_p": 0.0,
+      "acf_lag1": -0.030238762053400203,
+      "drift_rel": -0.0002710408423417088,
+      "n": 200000,
+      "min": 656.0,
+      "max": 1982.0,
+      "mean": 1372.576315,
+      "cv": 0.12011811312662271,
+      "max_over_median": 1.439360929557008
+    },
+    "coverage": {
+      "CP": {
+        "cov_mean": 0.9509709473684211,
+        "cov_ci95": 0.0009648041282047666,
+        "shortfall_pp": 0.0,
+        "bound_median": 1639.0,
+        "inf_rate": 0.0
+      },
+      "Tolerance": {
+        "cov_mean": 0.9545246315789474,
+        "cov_ci95": 0.0007650360222019992,
+        "shortfall_pp": 0.0,
+        "bound_median": 1642.0,
+        "inf_rate": 0.0
+      },
+      "EQ": {
+        "cov_mean": 0.9507757894736842,
+        "cov_ci95": 0.000965904337308326,
+        "shortfall_pp": 0.0,
+        "bound_median": 1639.0,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-point": {
+        "cov_mean": 0.9556776842105263,
+        "cov_ci95": 0.0014262054396978168,
+        "shortfall_pp": 0.0,
+        "bound_median": 1646.6479000135862,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-profile": {
+        "cov_mean": 0.9582509473684211,
+        "cov_ci95": 0.0008003465161315042,
+        "shortfall_pp": 0.0,
+        "bound_median": 1652.3988686555012,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-point": {
+        "cov_mean": 0.9469962105263159,
+        "cov_ci95": 0.002570929821444974,
+        "shortfall_pp": 0.3003789473684071,
+        "bound_median": 1636.245154090489,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-profile": {
+        "cov_mean": 0.9571442105263156,
+        "cov_ci95": 0.0016432330316170098,
+        "shortfall_pp": 0.0,
+        "bound_median": 1649.4166559150935,
+        "inf_rate": 0.0
+      }
+    },
+    "full_trace_gpd_fit": {
+      "u": 1697.0,
+      "xi": -0.14553658835156164,
+      "sigma": 57.522564040408724,
+      "k": 3937,
+      "n": 200000
+    }
+  },
+  {
+    "file": "tf/traces_final/insertsort_cache_on.csv",
+    "meta": {
+      "task": "insertsort_cache_on",
+      "n": "200000",
+      "unit": "cycles",
+      "clock_hz": "216000000",
+      "caches": "icache+dcache",
+      "block_cycles": "1582643574"
+    },
+    "diagnostics": {
+      "ljungbox_min_p": 0.010678560512236675,
+      "ljungbox_n_sig": 5,
+      "adf_p": 0.0,
+      "acf_lag1": 0.013621542533299114,
+      "drift_rel": 0.0004264671074723705,
+      "n": 200000,
+      "min": 133.0,
+      "max": 378.0,
+      "mean": 284.69295,
+      "cv": 0.10117565454759814,
+      "max_over_median": 1.3216783216783217
+    },
+    "coverage": {
+      "CP": {
+        "cov_mean": 0.9529124210526315,
+        "cov_ci95": 0.0009436726120968875,
+        "shortfall_pp": 0.0,
+        "bound_median": 329.0,
+        "inf_rate": 0.0
+      },
+      "Tolerance": {
+        "cov_mean": 0.9561275789473684,
+        "cov_ci95": 0.0005099279215632887,
+        "shortfall_pp": 0.0,
+        "bound_median": 330.0,
+        "inf_rate": 0.0
+      },
+      "EQ": {
+        "cov_mean": 0.9529124210526315,
+        "cov_ci95": 0.0009436726120968875,
+        "shortfall_pp": 0.0,
+        "bound_median": 329.0,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-point": {
+        "cov_mean": 0.9577717894736841,
+        "cov_ci95": 0.0006592592099788893,
+        "shortfall_pp": 0.0,
+        "bound_median": 331.20534978114637,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-profile": {
+        "cov_mean": 0.9611751578947368,
+        "cov_ci95": 0.0007708310258146825,
+        "shortfall_pp": 0.0,
+        "bound_median": 332.07999771324467,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-point": {
+        "cov_mean": 0.9408547368421053,
+        "cov_ci95": 0.003913057515442097,
+        "shortfall_pp": 0.9145263157894656,
+        "bound_median": 328.1191248989941,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-profile": {
+        "cov_mean": 0.9527042105263157,
+        "cov_ci95": 0.002562776906342203,
+        "shortfall_pp": 0.0,
+        "bound_median": 330.4139968579384,
+        "inf_rate": 0.0
+      }
+    },
+    "full_trace_gpd_fit": {
+      "u": 338.0,
+      "xi": -0.23254241384312702,
+      "sigma": 9.756950763120205,
+      "k": 3966,
+      "n": 200000
+    }
+  },
+  {
+    "file": "tf/traces_final/ludcmp_cache_off.csv",
+    "meta": {
+      "task": "ludcmp_cache_off",
+      "n": "200000",
+      "unit": "cycles",
+      "clock_hz": "216000000",
+      "caches": "disabled"
+    },
+    "diagnostics": {
+      "ljungbox_min_p": 3.322401453838779e-76,
+      "ljungbox_n_sig": 20,
+      "adf_p": 0.0,
+      "acf_lag1": -0.015085833565957892,
+      "drift_rel": -3.465063008429798e-05,
+      "n": 161502,
+      "min": 65202.0,
+      "max": 67338.0,
+      "mean": 66929.24313011604,
+      "cv": 0.0029680036950898068,
+      "max_over_median": 1.0059155687012638
+    },
+    "coverage": {
+      "CP": {
+        "cov_mean": 0.9534493274016185,
+        "cov_ci95": 0.001102660214071002,
+        "shortfall_pp": 0.0,
+        "bound_median": 67120.0,
+        "inf_rate": 0.0
+      },
+      "Tolerance": {
+        "cov_mean": 0.9555512138453618,
+        "cov_ci95": 0.0012100744803693535,
+        "shortfall_pp": 0.0,
+        "bound_median": 67121.0,
+        "inf_rate": 0.0
+      },
+      "EQ": {
+        "cov_mean": 0.9529128328338901,
+        "cov_ci95": 0.001053105837853113,
+        "shortfall_pp": 0.0,
+        "bound_median": 67120.0,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-point": {
+        "cov_mean": 0.9607023009597233,
+        "cov_ci95": 0.0017523698548465468,
+        "shortfall_pp": 0.0,
+        "bound_median": 67124.18683560911,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-profile": {
+        "cov_mean": 0.9630484086018666,
+        "cov_ci95": 0.0003525772360679153,
+        "shortfall_pp": 0.0,
+        "bound_median": 67128.02018738394,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-point": {
+        "cov_mean": 0.9746326781164606,
+        "cov_ci95": 0.0011412892583742193,
+        "shortfall_pp": 0.0,
+        "bound_median": 67159.04423012436,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-profile": {
+        "cov_mean": 0.9761207112777389,
+        "cov_ci95": 0.0009416622527111604,
+        "shortfall_pp": 0.0,
+        "bound_median": 67164.05269584848,
+        "inf_rate": 0.0
+      }
+    },
+    "full_trace_gpd_fit": {
+      "u": 67177.0,
+      "xi": 0.25493280397003576,
+      "sigma": 19.093202863460455,
+      "k": 2833,
+      "n": 161502
+    }
+  },
+  {
+    "file": "tf/traces_final/ludcmp_cache_on.csv",
+    "meta": {
+      "task": "ludcmp_cache_on",
+      "n": "200000",
+      "unit": "cycles",
+      "clock_hz": "216000000",
+      "caches": "icache+dcache",
+      "block_cycles": "3724612884"
+    },
+    "diagnostics": {
+      "ljungbox_min_p": 1.1355920697581454e-07,
+      "ljungbox_n_sig": 20,
+      "adf_p": 0.0,
+      "acf_lag1": -0.022958754879117943,
+      "drift_rel": 5.746752768540773e-05,
+      "n": 200000,
+      "min": 18354.0,
+      "max": 19219.0,
+      "mean": 18939.60062,
+      "cv": 0.0041706421235202995,
+      "max_over_median": 1.014570025867075
+    },
+    "coverage": {
+      "CP": {
+        "cov_mean": 0.9508284210526315,
+        "cov_ci95": 0.0006189509445510703,
+        "shortfall_pp": 0.0,
+        "bound_median": 19047.0,
+        "inf_rate": 0.0
+      },
+      "Tolerance": {
+        "cov_mean": 0.9542101052631579,
+        "cov_ci95": 0.0005961525121843128,
+        "shortfall_pp": 0.0,
+        "bound_median": 19049.0,
+        "inf_rate": 0.0
+      },
+      "EQ": {
+        "cov_mean": 0.9507040000000001,
+        "cov_ci95": 0.0006191331017887583,
+        "shortfall_pp": 0.0,
+        "bound_median": 19047.0,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-point": {
+        "cov_mean": 0.9562650526315789,
+        "cov_ci95": 0.0008848304554329363,
+        "shortfall_pp": 0.0,
+        "bound_median": 19051.139136795526,
+        "inf_rate": 0.0
+      },
+      "EVT-cv-profile": {
+        "cov_mean": 0.9599155789473685,
+        "cov_ci95": 0.0008458239786374924,
+        "shortfall_pp": 0.0,
+        "bound_median": 19053.57339884631,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-point": {
+        "cov_mean": 0.9502117894736841,
+        "cov_ci95": 0.0016642062618074578,
+        "shortfall_pp": 0.0,
+        "bound_median": 19046.895355360262,
+        "inf_rate": 0.0
+      },
+      "EVT-gof-profile": {
+        "cov_mean": 0.9606105263157894,
+        "cov_ci95": 0.0012038748187194598,
+        "shortfall_pp": 0.0,
+        "bound_median": 19053.99594755077,
+        "inf_rate": 0.0
+      }
+    },
+    "full_trace_gpd_fit": {
+      "u": 19072.0,
+      "xi": -0.10171723398286753,
+      "sigma": 25.59791570155378,
+      "k": 3974,
+      "n": 200000
+    }
+  }
+]

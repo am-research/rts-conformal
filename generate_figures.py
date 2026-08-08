@@ -298,7 +298,11 @@ for i in range(n_bins):
     cp_c.append(empirical_coverage(cp_unc, T_te[mask]))
     cqr_c.append(np.mean(T_te[mask] <= cqr_bounds[mask]))
 
-fig, axes = plt.subplots(1, 2, figsize=(8.5, 3.4))
+plt.rcParams.update({
+    "font.size": 13, "axes.labelsize": 14, "axes.titlesize": 14,
+    "xtick.labelsize": 12, "ytick.labelsize": 12, "legend.fontsize": 11,
+})
+fig, axes = plt.subplots(2, 1, figsize=(7.0, 7.2))
 
 ax = axes[0]
 samp = min(600, len(X_te))
@@ -308,24 +312,24 @@ ax.scatter(X_te[idx], T_te[idx], s=3, alpha=0.25, color='#aaaaaa',
 ax.plot(x_grid, true_q_g, 'k--', lw=1.2, label='True $q_{0.95}(x)$')
 ax.axhline(cp_unc, color=COLORS['cp'], lw=1.6,
            label=f'CP bound ({cp_unc:.0f}\\,µs)')
-ax.plot(x_grid, cqr_g, color=COLORS['aci'], lw=1.6, label='CQR bound')
+ax.plot(x_grid, cqr_g, color=COLORS['aci'], lw=2.2, label='CQR bound')
 ax.set_xlabel('Input complexity $x$')
 ax.set_ylabel('Execution time (µs)')
 ax.set_title('Unconditional CP vs. CQR bounds')
-ax.legend(frameon=False, fontsize=7.5)
+ax.legend(frameon=False, fontsize=11)
 
 ax = axes[1]
-ax.plot(bc, cp_c,  color=COLORS['cp'],  marker='o', ms=4,
+ax.plot(bc, cp_c,  color=COLORS['cp'],  marker='o', ms=7,
         label='CP (unconditional)')
-ax.plot(bc, cqr_c, color=COLORS['aci'], marker='s', ms=4,
+ax.plot(bc, cqr_c, color=COLORS['aci'], marker='s', ms=7,
         label='CQR')
-ax.axhline(1 - alpha_cqr, color='k', lw=0.8, linestyle='--',
+ax.axhline(1 - alpha_cqr, color='k', lw=1.2, linestyle='--',
            label='Nominal 95%')
 ax.set_xlabel('Input complexity $x$')
 ax.set_ylabel('Empirical coverage (per bin)')
 ax.set_title('Conditional coverage by input bin')
 ax.set_ylim(0.82, 1.02)
-ax.legend(frameon=False, fontsize=7.5)
+ax.legend(frameon=False, fontsize=11)
 
 fig.tight_layout()
 fig.savefig(os.path.join(OUT, 'cqr_conditional.pdf'), bbox_inches='tight')
@@ -364,12 +368,12 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 5.5), sharex=True,
 
 # Top: rolling coverage
 ax1.plot(x_ax, roll(static_cov, window), color=COLORS['cp'],
-         lw=1.5, label='Static CP', zorder=3)
+         lw=2.2, label='Static CP', zorder=3)
 lss = ['-', '--', ':']
 for g, ls in zip(gammas, lss):
     cov = aci_results[g]['coverage'].astype(float)
     ax1.plot(x_ax, roll(cov, window), color=COLORS['aci'],
-             lw=1.4, linestyle=ls, label=f'ACI $\\gamma={g}$')
+             lw=2.0, linestyle=ls, label=f'ACI $\\gamma={g}$')
 ax1.axhline(1 - alpha_aci, color='k', lw=0.8, linestyle='--',
             label='Nominal 95%')
 ax1.set_ylabel(f'Rolling coverage\n(window = {window})')
@@ -387,13 +391,13 @@ ax1.annotate('Static CP\ndegrades', xy=(8500, np.mean(static_cov[8000:9000])),
 best_g = 0.01
 alpha_t = aci_results[best_g]['alpha_t']
 ax2.plot(np.arange(len(alpha_t)), alpha_t, color=COLORS['aci'],
-         lw=1.2, label=f'$\\alpha_t$ ($\\gamma={best_g}$)')
+         lw=2.0, label=f'$\\alpha_t$ ($\\gamma={best_g}$)')
 ax2.axhline(alpha_aci, color='k', lw=0.8, linestyle='--',
             label=f'Target $\\alpha = {alpha_aci}$')
 ax2.set_xlabel('Time step $t$')
 ax2.set_ylabel('Effective $\\alpha_t$')
 ax2.set_title(f'ACI effective miscoverage level ($\\gamma = {best_g}$)')
-ax2.legend(frameon=False, fontsize=8)
+ax2.legend(frameon=False, fontsize=11)
 
 fig.savefig(os.path.join(OUT, 'aci_drift.pdf'), bbox_inches='tight')
 plt.close(fig)
